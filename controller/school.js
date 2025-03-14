@@ -7,7 +7,7 @@ exports.addSchool = async (req, res) => {
    
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ 
+      return res.status(200).json({ 
         success: false, 
         errors: errors.array() 
       });
@@ -21,7 +21,7 @@ exports.addSchool = async (req, res) => {
     
   
     if (isNaN(lat) || isNaN(lng)) {
-      return res.status(400).json({
+      return res.status(200).json({
         success: false,
         message: 'Latitude and longitude must be valid numbers'
       });
@@ -55,7 +55,7 @@ exports.listSchools = async (req, res) => {
    
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ 
+      return res.status(200).json({ 
         success: false, 
         errors: errors.array() 
       });
@@ -70,7 +70,7 @@ exports.listSchools = async (req, res) => {
     
    
     if (isNaN(userLat) || isNaN(userLng)) {
-      return res.status(400).json({
+      return res.status(200).json({
         success: false,
         message: 'Latitude and longitude must be valid numbers'
       });
