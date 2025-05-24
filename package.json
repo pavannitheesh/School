@@ -1,7 +1,7 @@
 {
   "name": "educase",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project provides a REST API to manage school data using Node.js, Express.js, and MySQL. It allows users to add schools and retrieve a list of schools sorted by proximity to a given location.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
